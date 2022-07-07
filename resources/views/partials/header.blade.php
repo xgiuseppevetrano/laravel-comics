@@ -1,19 +1,29 @@
 <header>
     <header>
+        <div class="header-top">
+            <div class="container">
+                <small class="header-top__text">Dc power<sup>sm</sup> visa<i class="fa-regular fa-registered"></i></small>
+                <small class="header-top__text">Additional dc sites <i class="fa-solid fa-caret-down"></i></small>
+            </div>
+        </div>
         <div class="container">
-            <div class="header">
-                <div class="header__logo">
-                    <img class="header__logo-img" src="{{asset('img/dc-logo.png')}}" alt="header logo"/>
+            <div class="header-bottom">
+                <div class="header-bottom__logo">
+                    <img class="header-bottom__logo-img" src="{{asset('img/dc-logo.png')}}" alt="header-bottom logo"/>
                 </div>
-                <nav class="header__nav">
-                    <ul class="header__nav-item">
+                <nav class="header-bottom__nav">
+                    <ul class="header-bottom__nav-item">
                         @foreach ($links as $link)
-                            <li class="header__nav-list">
-                                <a class="header__nav-link" href="#">{{$link}}</a>
+                            <li class="header-bottom__nav-list">
+                                <a class="header-bottom__nav-link" class="@if($link["isActive"]) is-active @endif" href="#">{{$link["text"]}}</a>
                             </li>
                         @endforeach
                     </ul>
                 </nav>
+                <div class="header-bottom__search">
+                    <input class="header-bottom__search-input" type="text" placeholder="Search">
+                    <button class="header-bottom__search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </div>
         </div>
     </header>

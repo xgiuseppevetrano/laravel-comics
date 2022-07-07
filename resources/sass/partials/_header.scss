@@ -1,4 +1,17 @@
-.header {
+.header-top {
+    background-color: var(--primary-color);
+    padding: .3125rem;
+    text-align: right;
+
+    &__text {
+        color: var(--secondary-color-text);
+        text-transform: uppercase;
+        font-size: .75rem;
+        margin-left: 3.75rem;
+    }
+}
+
+.header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,5 +49,29 @@
             }
         }
 
+    }
+
+    &__search {
+        border-bottom: var(--primary-color) 3px solid;
+        
+        &-input {
+            margin-right: .3125rem;
+            width: 6.25rem;
+        }
+
+        &-input,
+        &-button {
+            border: none;
+            background-image: none;
+            background-color: transparent;
+            box-shadow: none;
+            color: var(--secondary-color);
+        }
+
+        &-input::placeholder {
+            color: var(--secondary-color);
+            text-align: right;
+            font-weight: 500;
+        }
     }
 }

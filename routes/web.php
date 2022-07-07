@@ -16,16 +16,46 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $comics = config('comics');
     $links = [
-        "Characters",
-        "Comics",
-        "Movie",
-        "Tv",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop"
+        [
+            "text" => "Characters",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Comics",
+            "isActive" => "true"
+        ],
+        [
+            "text" => "Movie",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Tv",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Games",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Collectibles",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Videos",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Fans",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "News",
+            "isActive" => "false"
+        ],
+        [
+            "text" => "Shop",
+            "isActive" => "false"
+        ],
     ];
 
     $shopLinks = [
