@@ -151,6 +151,7 @@ body {
 }
 .comics__card-text {
   color: var(--secondary-color-text);
+  text-transform: uppercase;
 }
 
 .jumbotron {
