@@ -18,43 +18,43 @@ Route::get('/', function () {
     $links = [
         [
             "text" => "Characters",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Comics",
-            "isActive" => "true"
+            "isActive" => true
         ],
         [
             "text" => "Movie",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Tv",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Games",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Collectibles",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Videos",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Fans",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "News",
-            "isActive" => "false"
+            "isActive" => false
         ],
         [
             "text" => "Shop",
-            "isActive" => "false"
+            "isActive" => false
         ],
     ];
 

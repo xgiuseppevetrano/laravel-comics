@@ -15,7 +15,7 @@
                     <ul class="header-bottom__nav-item">
                         @foreach ($links as $link)
                             <li class="header-bottom__nav-list">
-                                <a class="header-bottom__nav-link" class="@if($link["isActive"]) is-active @endif" href="#">{{$link["text"]}}</a>
+                                <a class="header-bottom__nav-link @if($link["isActive"]) active @endif" href="#">{{$link["text"]}}</a>
                             </li>
                         @endforeach
                     </ul>
