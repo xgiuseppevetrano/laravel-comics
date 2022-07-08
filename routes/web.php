@@ -15,143 +15,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics');
-
-    $links = [
-        [
-            "text" => "Home",
-            "route" => "home"
-        ],
-        [
-            "text" => "Comics",
-            "route" => ""
-        ],
-        [
-            "text" => "Movie",
-            "route" => ""
-        ],
-        [
-            "text" => "Tv",
-            "route" => ""
-        ],
-        [
-            "text" => "Games",
-            "route" => ""
-        ],
-        [
-            "text" => "Collectibles",
-            "route" => ""
-        ],
-        [
-            "text" => "Videos",
-            "route" => ""
-        ],
-        [
-            "text" => "Fans",
-            "route" => ""
-        ],
-        [
-            "text" => "News",
-            "route" => ""
-        ],
-        [
-            "text" => "Shop",
-            "route" => ""
-        ],
-    ];
-
-    $shopLinks = [
-        [
-            "name" => "Digital Comics",
-            "src" => "img/buy-comics-digital-comics.png"
-        ],
-        [
-            "name" => "Dc merchandise",
-            "src" => "img/buy-comics-merchandise.png"
-        ],
-        [
-            "name" => "Subscription",
-            "src" => "img/buy-comics-subscriptions.png"
-        ],
-        [
-            "name" => "Comics shop locator",
-            "src" => "img/buy-comics-shop-locator.png"
-        ],
-        [
-            "name" => "Dc power pisa",
-            "src" => "img/buy-dc-power-visa.svg"
-        ]
-    ];
-
-    $footerLinks = [
-        [
-            "title" => "Dc comics",
-            "texts" => [
-                'Characters',
-                'Comics',
-                'Movies',
-                'TV',
-                'Games',
-                'Videos',
-                'News'
-            ]
-        ],
-        [
-            "title" => "Shop",
-            "texts" => [
-                'Shop DC',
-                'Collectibles',
-            ]
-        ],
-        [
-            "title" => "Dc",
-            "texts" => [
-                'Terms Of Use',
-                'Privacy policy',
-                'Ad Choices',
-                'Advertising',
-                'Jobs',
-                'Subscriptions',
-                'Talent Workshops',
-                'CPSC Certificates',
-                'Ratings',
-                'Shop Help',
-                'Contact Us'
-            ]
-        ],
-        [
-            "title" => "Sites",
-            "texts" => [
-                'DC',
-                'MAD Magazine',
-                'DC Kids',
-                'DC Universe',
-                'DC Power Visa'
-            ]
-        ]
-    ];
-
-    $socials = [
-        [
-            "name" => "facebook",
-            "src" => "img/footer-facebook.png"
-        ],
-        [
-            "name" => "twitter",
-            "src" => "img/footer-twitter.png"
-        ],
-        [
-            "name" => "youtube",
-            "src" => "img/footer-youtube.png"
-        ],
-        [
-            "name" => "pinterest",
-            "src" => "img/footer-pinterest.png"
-        ],
-        [
-            "name" => "periscope",
-            "src" => "img/footer-periscope.png"
-        ]
-    ];
+    $links = config('links');
+    $shopLinks = config('shoplinks');
+    $footerLinks = config('footerlinks');
+    $socials = config('socials');
 
     return view('home', compact('comics', 'links', 'shopLinks', 'footerLinks', 'socials'));
 })->name('home');
+
+Route::get('comic/{id}', function ($id) {
+    $comics = config('comics');
+    $links = config('links');
+    $shopLinks = config('shoplinks');
+    $footerLinks = config('footerlinks');
+    $socials = config('socials');
+
+    if($id >= count($comics)) {
+        abort('404');
+    }
+
+    $comic = $comics[$id];
+
+    return view('comic', compact('comic', 'links', 'shopLinks', 'footerLinks', 'socials'));
+})->where('id', '[0-9]+')->name('comic');

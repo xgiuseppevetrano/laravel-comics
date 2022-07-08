@@ -1,11 +1,9 @@
 @extends('layouts.base')
 
 @section('title')
-    Comic
+    Error
 @endsection
 
 @section('page-content')
-    <main>
-        <h1>{{$comic["title"]}}</h1>
-    </main>
+    <h1>Mi dispiace! La pagina non è stata trovata</h1>
 @endsection
