@@ -15,7 +15,9 @@
                     <ul class="header-bottom__nav-item">
                         @foreach ($links as $link)
                             <li class="header-bottom__nav-list">
-                                <a class="header-bottom__nav-link @if($link["isActive"]) active @endif" href="#">{{$link["text"]}}</a>
+                                <a class="header-bottom__nav-link {{Route::is($link["route"]) ? 'active' : ''}}" href="{{$link["route"] != null ? route($link["route"]) : '#'}}">
+                                    {{$link["text"]}}
+                                </a>
                             </li>
                         @endforeach
                     </ul>

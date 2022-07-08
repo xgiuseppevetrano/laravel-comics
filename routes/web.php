@@ -15,46 +15,47 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics');
+
     $links = [
         [
-            "text" => "Characters",
-            "isActive" => false
+            "text" => "Home",
+            "route" => "home"
         ],
         [
             "text" => "Comics",
-            "isActive" => true
+            "route" => ""
         ],
         [
             "text" => "Movie",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Tv",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Games",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Collectibles",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Videos",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Fans",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "News",
-            "isActive" => false
+            "route" => ""
         ],
         [
             "text" => "Shop",
-            "isActive" => false
+            "route" => ""
         ],
     ];
 
@@ -153,4 +154,4 @@ Route::get('/', function () {
     ];
 
     return view('home', compact('comics', 'links', 'shopLinks', 'footerLinks', 'socials'));
-});
+})->name('home');
