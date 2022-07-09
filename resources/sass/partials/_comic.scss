@@ -3,6 +3,43 @@
         max-width: 65.625rem;
     }
 
+    &__cover {
+        background-color: var(--primary-color);
+        position: relative;
+        height: 5rem;
+
+        &-box {
+            position: absolute;
+            bottom: 1rem;
+            border: .0625rem solid var(--secondary-color-text);
+        }
+        
+        &-img {
+            height: 18.75rem;
+        }
+
+        &-type {
+            position: absolute;
+            top: 0;
+        }
+
+        &-type,
+        &-gallery {
+            color: var(--secondary-color-text);
+            background-color: #00a9d9;
+            padding: .0625rem .1875rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &-gallery {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+
     &-top {
         padding: 2.5rem 0;
         display: flex;

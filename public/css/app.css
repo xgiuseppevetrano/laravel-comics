@@ -186,6 +186,36 @@ body {
 .comic .container {
   max-width: 65.625rem;
 }
+.comic__cover {
+  background-color: var(--primary-color);
+  position: relative;
+  height: 5rem;
+}
+.comic__cover-box {
+  position: absolute;
+  bottom: 1rem;
+  border: 0.0625rem solid var(--secondary-color-text);
+}
+.comic__cover-img {
+  height: 18.75rem;
+}
+.comic__cover-type {
+  position: absolute;
+  top: 0;
+}
+.comic__cover-type, .comic__cover-gallery {
+  color: var(--secondary-color-text);
+  background-color: #00a9d9;
+  padding: 0.0625rem 0.1875rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.comic__cover-gallery {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 .comic-top {
   padding: 2.5rem 0;
   display: flex;

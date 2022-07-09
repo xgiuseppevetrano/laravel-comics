@@ -7,6 +7,19 @@
 @section('page-content')
     <main>
         <section class="comic">
+            <div class="comic__cover">
+                <div class="container">
+                    <div class="comic__cover-box">
+                        <img class="comic__cover-img" src="{{$comic["thumb"]}}" alt="{{$comic["title"]}}">
+                        <div class="comic__cover-type">
+                            <small>{{$comic["type"]}}</small>
+                        </div>
+                        <div class="comic__cover-gallery">
+                            <small>View gallery</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="comic-top">
                     <div class="comic-top__dx">
