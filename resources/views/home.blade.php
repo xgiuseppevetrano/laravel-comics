@@ -10,11 +10,11 @@
             <div class="container">
                 <button class="comics__button comics__button--position">Current Series</button>
                 <div class="comics__list">
-                    @foreach ($comics as $comic)
-                        <div class="comics__card">
+                    @foreach ($comics as $id => $comic)
+                        <a href="{{route('comic',['id'=> $id])}}" class="comics__card">
                             <img class="comics__card-img" src="{{asset($comic["thumb"])}}" alt="{{$comic["series"]}}">
                             <small class="comics__card-text">{{$comic["series"]}}</small>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
                 <button class="comics__button comics__button--big">Load more</button>
