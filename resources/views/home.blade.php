@@ -20,5 +20,17 @@
                 <button class="comics__button comics__button--big">Load more</button>
             </div>
         </section>
+        <section class="shop">
+            <div class="container">
+                <div class="shop__link">
+                    @foreach ($shopLinks as $shopLink)
+                        <a href="#" class="shop__item">
+                            <img class="shop__item-img" src="{{asset($shopLink["src"])}}" alt="{{$shopLink["name"]}}">
+                            <small>{{$shopLink["name"]}}</small>
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+        </section>
     </main>
 @endsection

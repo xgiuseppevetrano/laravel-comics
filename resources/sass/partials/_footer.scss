@@ -1,28 +1,4 @@
 .footer-top {
-    background-color: var(--primary-color);
-    padding: 2.1875rem;
-
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__item {
-        display: flex;
-        align-items: center;
-        color: var(--secondary-color-text);
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &-img {
-            height: 2.5rem;
-            margin: 0 .9375rem;
-        }
-    }
-}
-
-.footer-center {
     background-image: url('../img/footer-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;

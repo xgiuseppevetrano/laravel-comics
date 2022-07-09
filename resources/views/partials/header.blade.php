@@ -12,9 +12,9 @@
             </div>
             <nav class="header-bottom__nav">
                 <ul class="header-bottom__nav-item">
-                    @foreach ($links as $link)
+                    @foreach ($links as $id => $link)
                         <li class="header-bottom__nav-list">
-                            <a class="header-bottom__nav-link {{Route::is($link["route"]) ? 'active' : ''}}" href="{{$link["route"] != null ? route($link["route"]) : '#'}}">
+                            <a class="header-bottom__nav-link {{Route::is($link["route"]) ? 'active' : ''}}" href="{{$link["route"] != null ? route($link["route"], $id) : '#'}}">
                                 {{$link["text"]}}
                             </a>
                         </li>
@@ -27,5 +27,5 @@
             </div>
         </div>
     </div>
-    <section class="jumbotron"></section>
+    <div class="jumbotron"></div>
 </header>
