@@ -1,6 +1,6 @@
 .comic {
     .container {
-        max-width: 62.5rem;
+        max-width: 65.625rem;
     }
 
     &-top {
@@ -21,6 +21,8 @@
 
             &-adv {
                 text-transform: uppercase;
+                font-weight: 500;
+                color: var(--primary-color-text);
             }
         }
 
@@ -39,7 +41,7 @@
             &-sx {
                 padding: .625rem .9375rem;
                 background-color: #55ba59;
-                border: 1px solid #000;
+                border-bottom: .0625rem solid var(--primary-color-text);
             }
 
             &-dx {
@@ -48,6 +50,7 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 70%;
+                border-right: .0625rem solid var(--primary-color-text);
             }
 
             &-price,
@@ -74,7 +77,51 @@
     }
 
     &-center {
-        padding: 1.25rem 0;
-        border: 1px 0 1px solid #e3e3e3;
+        padding: 1.25rem 0 5rem;
+        border-top: .0625rem solid #e3e3e3;
+        border-bottom: .0625rem solid #e3e3e3;
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+
+            &-dx {
+                width: 45%;
+            }
+
+            &-sx {
+                width: 50%;
+            }
+
+            &-title {
+                color: #003f5e;
+                margin-bottom: 1.5625rem;
+            }
+        }
+
+        &__row {
+            border-top: .0625rem solid #e3e3e3;
+            border-bottom: .0625rem solid #e3e3e3;
+            display: flex;
+            padding: .625rem 0;
+            color: #003f5e;
+
+            &-title {
+                width: 25%;
+            }
+
+            &-text {
+                width: 75%;
+            }
+
+            &-link {
+                color: #00a9df;
+                text-decoration: none;
+
+                &--big {
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
 }

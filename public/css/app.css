@@ -184,7 +184,7 @@ body {
 }
 
 .comic .container {
-  max-width: 62.5rem;
+  max-width: 65.625rem;
 }
 .comic-top {
   padding: 2.5rem 0;
@@ -203,6 +203,8 @@ body {
 }
 .comic-top__sx-adv {
   text-transform: uppercase;
+  font-weight: 500;
+  color: var(--primary-color-text);
 }
 .comic-top__title {
   color: #003f5e;
@@ -217,7 +219,7 @@ body {
 .comic-top__store-dx, .comic-top__store-sx {
   padding: 0.625rem 0.9375rem;
   background-color: #55ba59;
-  border: 1px solid #000;
+  border-bottom: 0.0625rem solid var(--primary-color-text);
 }
 .comic-top__store-dx {
   color: #bafd9c;
@@ -225,6 +227,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 70%;
+  border-right: 0.0625rem solid var(--primary-color-text);
 }
 .comic-top__store-price, .comic-top__store-sx {
   color: var(--secondary-color-text);
@@ -242,8 +245,43 @@ body {
   background-color: #f6f6f6;
 }
 .comic-center {
-  padding: 1.25rem 0;
-  border: 1px 0 1px solid #e3e3e3;
+  padding: 1.25rem 0 5rem;
+  border-top: 0.0625rem solid #e3e3e3;
+  border-bottom: 0.0625rem solid #e3e3e3;
+}
+.comic-center__info {
+  display: flex;
+  justify-content: space-between;
+}
+.comic-center__info-dx {
+  width: 45%;
+}
+.comic-center__info-sx {
+  width: 50%;
+}
+.comic-center__info-title {
+  color: #003f5e;
+  margin-bottom: 1.5625rem;
+}
+.comic-center__row {
+  border-top: 0.0625rem solid #e3e3e3;
+  border-bottom: 0.0625rem solid #e3e3e3;
+  display: flex;
+  padding: 0.625rem 0;
+  color: #003f5e;
+}
+.comic-center__row-title {
+  width: 25%;
+}
+.comic-center__row-text {
+  width: 75%;
+}
+.comic-center__row-link {
+  color: #00a9df;
+  text-decoration: none;
+}
+.comic-center__row-link--big {
+  text-transform: uppercase;
 }
 
 .footer-top {

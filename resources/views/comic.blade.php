@@ -30,8 +30,47 @@
             </div>
             <div class="comic-center">
                 <div class="container">
-                    <div>
-                        
+                    <div class="comic-center__info">
+                        <div class="comic-center__info-dx">
+                            <h3 class="comic-center__info-title">Talent</h3>
+                            <div class="comic-center__row">
+                                <small class="comic-center__row-title">Art by:</small>
+                                <p class="comic-center__row-text">
+                                    @foreach ($comic["artists"] as $artist)
+                                        <small>
+                                            <a class="comic-center__row-link" href="#">{{$artist}}</a>@if(!$loop->last), @endif
+                                        </small>
+                                    @endforeach
+                                </p>
+                            </div>
+                            <div class="comic-center__row">
+                                <small class="comic-center__row-title">Written by:</small>
+                                <p class="comic-center__row-text">
+                                    @foreach ($comic["writers"] as $writen)
+                                        <small>
+                                            <a class="comic-center__row-link" href="#">{{$writen}}</a>@if(!$loop->last), @endif
+                                        </small>
+                                    @endforeach
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comic-center__info-sx">
+                            <h3 class="comic-center__info-title">Specs</h3>
+                            <div class="comic-center__row">
+                                <small class="comic-center__row-title">Series:</small>
+                                <small>
+                                    <a class="comic-center__row-link comic-center__row-link--big" href="#">{{$comic["series"]}}</a>
+                                </small>
+                            </div>
+                            <div class="comic-center__row">
+                                <small class="comic-center__row-title">U.S. Price:</small>
+                                <small>{{$comic["price"]}}</small>
+                            </div>
+                            <div class="comic-center__row">
+                                <small class="comic-center__row-title">On Sale Date:</small>
+                                <small>{{$comic["sale_date"]}}</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
