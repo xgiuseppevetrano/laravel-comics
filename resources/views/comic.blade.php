@@ -76,7 +76,24 @@
             </div>
             <div class="comic-bottom">
                 <div class="container">
-
+                    <div class="comic-bottom__row">
+                        <div class="comic-bottom__col">
+                            <small class="comic-bottom__col-title">Digital comics</small>
+                            <img class="comic-bottom__col-img" src="{{asset('img/cta-icon-1.png')}}" alt="digital comics">
+                        </div>
+                        <div class="comic-bottom__col">
+                            <small class="comic-bottom__col-title">Shop dc</small>
+                            <img class="comic-bottom__col-img" src="{{asset('img/cta-icon-2.png')}}" alt="shop dc">
+                        </div>
+                        <div class="comic-bottom__col">
+                            <small class="comic-bottom__col-title">Comic shop locator</small>
+                            <img class="comic-bottom__col-img" src="{{asset('img/cta-icon-3.png')}}" alt="comic shop locator">
+                        </div>
+                        <div class="comic-bottom__col">
+                            <small class="comic-bottom__col-title">Subscriptions</small>
+                            <img class="comic-bottom__col-img" src="{{asset('img/cta-icon-4.png')}}" alt="subscriptions">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

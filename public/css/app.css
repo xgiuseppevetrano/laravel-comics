@@ -241,9 +241,6 @@ body {
 .comic-top__store-available {
   text-transform: uppercase;
 }
-.comic-center, .comic-bottom {
-  background-color: #f6f6f6;
-}
 .comic-center {
   padding: 1.25rem 0 5rem;
   border-top: 0.0625rem solid #e3e3e3;
@@ -282,6 +279,29 @@ body {
 }
 .comic-center__row-link--big {
   text-transform: uppercase;
+}
+.comic-center, .comic-bottom {
+  background-color: #f6f6f6;
+}
+.comic-bottom__row {
+  display: flex;
+  justify-content: center;
+}
+.comic-bottom__col {
+  width: 25%;
+  padding: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  border-right: 0.0625rem solid #e3e3e3;
+  border-left: 0.0625rem solid #e3e3e3;
+}
+.comic-bottom__col-title {
+  text-transform: uppercase;
+  color: var(--tertiary-color-text);
+  font-weight: 500;
+}
+.comic-bottom__col-img {
+  height: 2.5rem;
 }
 
 .footer-top {
